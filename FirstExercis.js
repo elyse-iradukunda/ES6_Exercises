@@ -7,3 +7,12 @@ if (true) {
    varX = true;
 }
 assert.equal(varX, true);
+
+// WHEN declaring a variable using let THEN the scope is limited to the surrounding block (enclosed in { and })
+//   let  letX = true;
+
+
+if (true) {
+  let  letX = true;
+}
+assert.throws(() => letX, ReferenceError);
