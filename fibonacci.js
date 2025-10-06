@@ -8,7 +8,6 @@ function * Naming(limit){
         [a,b]=[b,a+b];
         counter++;
     }
-
 }
 
 for( let i of Naming(19)){
