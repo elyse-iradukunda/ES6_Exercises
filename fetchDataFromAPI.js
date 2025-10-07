@@ -1,12 +1,8 @@
 const getch = async () => {
-  try {
-    const data = 'https://jsonplaceholder.typicode.com/users'
-    const fetchi = await fetch(data)
-    const user = await fetchi.json()
-    return user.filter(elm => elm.id == 9)
-  } catch {
-    throw new Error('Data is not found!')
-  }
+    const api = 'https://jsonplaceholder.typicode.com/users';
+   const data = await fetch(api)
+   const res = await data.json();
+   console.log(res)
 }
 
 const result = await getch()
